@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="iti.test.day6.assignment2.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_retriveFragment"
+            app:destination="@id/retriveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/retriveFragment"
+        android:name="iti.test.day6.assignment2.RetriveFragment"
+        android:label="fragment_retrive"
+        tools:layout="@layout/fragment_retrive" >
+        <argument
+            android:name="FirstName"
+            app:argType="string"
+            android:defaultValue="unknown" />
+        <argument
+            android:name="LastName"
+            app:argType="string"
+            android:defaultValue="unknown" />
+    </fragment>
+</navigation>
